@@ -1,6 +1,6 @@
 package org.tkr.app;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -13,8 +13,9 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void とりあえずJunitを試す() {
+		String actual = App.toString(1);
+		String expect = "1";
+		assertEquals(expect, actual);
     }
 }
