@@ -1,18 +1,22 @@
 package org.tkr.app;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println(toString(1));
-        
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@EnableAutoConfiguration
+public class App {
+
+    @RequestMapping("/")
+	static
+    String home() {
+        return "Hello World!";
     }
-    
-    public static String toString(int number) {
-    	return "1";
+
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
     }
+
 }
