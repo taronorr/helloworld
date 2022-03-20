@@ -11,10 +11,10 @@ public class HomeController{
 		return "Hello World!";
 	}
 	@RequestMapping("/hello")
-	public static String hello(Model model) {
+	public String hello(Model model) {
 		String name = "Taro";
 		model.addAttribute("name", name);
-		return "Hello World!";
+		return "helloworld";
 	}
 	
 }
